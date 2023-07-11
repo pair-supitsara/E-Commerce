@@ -6,17 +6,17 @@ inputEmail.addEventListener('keyup', function(){
 })
 
 const inputUsername = document.getElementById('inputUsername')
-inputUsername.addEventListener('', function(){
+inputUsername.addEventListener('keyup', function(){
     
 })
 
 const inputPassword = document.getElementById('inputPassword')
-inputPassword.addEventListener('', function(){
+inputPassword.addEventListener('keyup', function(){
     
 })
 
 const inputConfirmPassword = document.getElementById('inputConfirmPassword')
-inputConfirmPassword.addEventListener('', function(){
+inputConfirmPassword.addEventListener('keyup', function(){
     
 })
 
