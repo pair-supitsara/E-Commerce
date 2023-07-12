@@ -5,22 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <style>
-        .box {
-            background-color: tomato;
-            width: 40px;
-            height: 40px;
-        }
-
-        .container {
-            overflow-y: scroll;
-            height: 100vh;
-            scroll-snap-points-y: repeat(100vh);
-            scroll-snap-type: y mandatory;
-        }
         html, 
         body {
             height: 100vh;
             overflow: hidden;
+        }
+        .container {
+            overflow-y: scroll;
+            height: 100vh;
+            scroll-snap-type: y mandatory;
         }
         .container > div {
             height: 100vh;
@@ -66,18 +59,14 @@
                 </div>
             </div>
         </div>
-        <div class="bg-primary" style="position: relative; height: 100dvh;">
-        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="./script/utility.js"></script>
-    <script src="./script/login.js"></script>
+    <script type="module" src="./script/login.js"></script>
     <script>
-        console.log(555)
         fnCallBackAPI('https://course-api.com/react-store-products', {}, ()=>{
             console.log(1234)
         })
-        
     </script>
 </body>
 
