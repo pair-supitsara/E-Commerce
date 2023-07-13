@@ -1,15 +1,20 @@
+
 /* 
     make request to api
 */
-const hostname = 'http://127.0.0.1:3000'
+const protocol = window.location.protocol
+const hostname = protocol + '://127.0.0.1:3000/api/demo/fnDemo'
+
 
 const api = {
-    fnPostApi: async function fnCallAPI(url, data){
+    fnfetchPostApi: async function fnCallAPI(endpoint, data){
+        console.log(endpoint)
+        console.log(data)
         return await new Promise((resolve, reject) => {
             try {
                 fetch({
                     method: 'POST',
-                    url: url,
+                    url: endpoint,
                     headers: {
                         Accept: 'application.json',
                         'Content-Type': 'application/json',
@@ -18,32 +23,38 @@ const api = {
                 }).then((response) => {
                     response
                 }).then((json) => {
-                    resolve(json)
+                    console.log(json)
+                    return resolve(json)
                 })
             } catch(error){
+                console.log(error)
                 reject(error)
             }
         })
-    },
-    fnCallBackAPI: function (url, data, callback){
-        try {
-            fetch({
-                method: 'GET',
-                url: url,
-                headers: {
-                    Accept: 'application.json',
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data)
-            }).then((response) => {
-                response
-            }).then((json) => {
-                callback()
-            })
-        } catch (error){
-            throw error
-        }
-    } 
+    },    
+    fnJQueryPostApi: async function (endpoint, data){
+        console.log(endpoint)
+        console.log(data)
+        return await new Promise((resolve, reject) => {
+            try {
+                $.post({
+                    url: endpoint,
+                    data: JSON.stringify(data),
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    success : function (res) {
+                        console.log(res)
+                        resolve(res)    
+                    }
+                })
+            } catch (error) {
+                console.log(error)
+                reject(error)
+            }
+        })
+    }
 }
 
 export default api
