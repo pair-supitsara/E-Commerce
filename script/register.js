@@ -2,85 +2,92 @@ import validation from './module/validate.js'
 import api from './module/requestapi.js'
 
 // #region event listener
-
 const inputEmail = document.getElementById('inputEmail')
 const warningInputEmail = document.getElementById('warningInputEmail')
 inputEmail.addEventListener('keyup', function(){
-    const isCorrect = validation.fnValidationEmail(inputEmail.value)
-    validation.fnShowTextWarning(isCorrect, warningInputEmail)
+    fnValidationEmail(inputEmail.value, warningInputEmail)
 })
 
 const inputUsername = document.getElementById('inputUsername')
 const warningInputUsername = document.getElementById('warningInputUsername')
 inputUsername.addEventListener('keyup', function(){
-    const isCorrect = validation.fnValidationUsername(inputUsername.value)
-    validation.fnShowTextWarning(isCorrect, warningInputUsername)
+    fnValidationUsername(inputUsername.value, warningInputUsername)
 })
 
 const inputPassword = document.getElementById('inputPassword')
 const warningInputPassword = document.getElementById('warningInputPassword')
 inputPassword.addEventListener('keyup', function(){
-    const isCorrect = validation.fnValidationPassword(inputPassword.value)
-    validation.fnShowTextWarning(isCorrect, warningInputPassword)
+    fnValidationPassword(inputPassword.value, warningInputPassword)
 })
 
 const inputConfirmPassword = document.getElementById('inputConfirmPassword')
 const warningInputConfirmPassword = document.getElementById('warningInputConfirmPassword')
 inputConfirmPassword.addEventListener('keyup', function(){
-    const bool = (inputPassword.value == inputConfirmPassword.value)
-    validation.fnShowTextWarning(bool, warningInputConfirmPassword)
+    fnValidationConfirmPassword(inputPassword.value, inputConfirmPassword.value, warningInputConfirmPassword)
 })
 
 const btnRegister = document.getElementById('btnRegister')
-
 btnRegister.addEventListener('click', async function(e){
     e.preventDefault()
-    /* 1. */
-    const countValidInput = document.getElementsByClassName('d-none').length
-    const countTotalInput = document.getElementsByClassName('warning').length
-    const isValidForm = (countValidInput == countTotalInput)
-    /* 2. */
-    const isEmptyForm = fnCheckFormEmpty()
-    /* 3. */
-    const endpoint = 'http://127.0.0.1:3000/api/demo/fnDemo'
-    const json = {
-        username: inputUsername.value
-    }
-    const statusFormServer = await api.fnJQueryPostApi(endpoint, json)
-    console.log(statusFormServer)
+    /* 1. validate */
+    const { isValidEmail } = fnValidationEmail(inputEmail.value, warningInputEmail)
+    const { isValidUsername } = fnValidationUsername(inputUsername.value, warningInputUsername)
+    const { isValidPassword } = fnValidationPassword(inputPassword.value, warningInputPassword)
+    const { isValidConfirmPassword } = fnValidationConfirmPassword(inputPassword.value, inputConfirmPassword.value, warningInputConfirmPassword)
+    const isValidForm = isValidEmail && isValidUsername && isValidPassword && isValidConfirmPassword
+    
+    /* 2. Is this email registered ? */
+    const isEmailNeverUsed = await fnCheckIsEmailRegistered(inputEmail.value) 
 
-    let textAlert = ''
-    if (isValidForm && isEmptyForm && statusFormServer) {
-        textAlert = "Register Complete"
-    } else {
-        textAlert = "Register Incomplete"
-    }
-
-    const alertMessage = document.getElementById('alertMessage')
-    alertMessage.innerText = textAlert
-    const exampleModal = new bootstrap.Modal(document.getElementById('exampleModal'))
-    exampleModal.show()
+    /* 3. alert message */
+    fnAlertMessage(isValidForm, isEmailNeverUsed)
 })
 
 // #endregion
 
-function fnCheckFormEmpty(){
-    const isEmailEmpty = validation.fnValidationInputEmpty(inputEmail)
-    if (isEmailEmpty) {
-        return false // 'email is empty'
-    }
-    const isUsernameEmpty = validation.fnValidationInputEmpty(inputUsername)
-    if (isEmailEmpty) {
-        return false // 'username is empty'
-    }
-    const isPasswordEmpty = validation.fnValidationInputEmpty(warningInputPassword)
-    if (isPasswordEmpty) {
-        return false // 'password is empty'
-    }
-    const isConfirmPasswordEmpty = validation.fnValidationInputEmpty(inputConfirmPassword)
-    if (isPasswordEmpty) {
-        return false // 'confirm-password is empty'
-    }
-    return true
+function fnValidationEmail(email, warningInputEmail) {
+    const isValidEmail = validation.fnValidationEmail(email)
+    validation.fnShowTextWarning(isValidEmail, warningInputEmail)
+    return isValidEmail
 }
 
+function fnValidationUsername(username, warningInputUsername) {
+    const isValidUsername = validation.fnValidationUsername(username)
+    validation.fnShowTextWarning(isValidUsername, warningInputUsername)
+    return isValidUsername
+}
+
+function fnValidationPassword(password, warningInputPassword) {
+    const isValidPassword = validation.fnValidationPassword(password)
+    validation.fnShowTextWarning(isValidPassword, warningInputPassword)
+    return isValidPassword
+}
+
+function fnValidationConfirmPassword(password, confirmpassword, warningInputConfirmPassword) {
+    const isValidConfirmPassword = (password == confirmpassword)
+    validation.fnShowTextWarning(isValidConfirmPassword, warningInputConfirmPassword)
+    return isValidConfirmPassword
+}
+
+async function fnCheckIsEmailRegistered(email) {
+    const endpoint = 'http://127.0.0.1:3000/api/login/fnRegister'
+    const json = {
+        username: email
+    }
+    await api.fnJQueryPostApi(endpoint, json)
+}
+
+function fnAlertMessage(isValidForm, isEmailNeverUsed) {
+    let msg = ''
+    if (isValidForm && isEmailNeverUsed) {
+        msg = "Register Complete"
+    } else {
+        msg = "Register Incomplete"
+    }
+
+    const alertMessage = document.getElementById('alertMessage')
+    alertMessage.innerText = msg
+
+    const exampleModal = new bootstrap.Modal(document.getElementById('exampleModal'))
+    exampleModal.show()
+}

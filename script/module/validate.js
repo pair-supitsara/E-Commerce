@@ -3,7 +3,7 @@
 */
 const validation = {
     fnValidationEmail: (str) => {
-        const regex = /^(\w+\.)?\w+\@\w+\.\w+$/
+        const regex = /((\w+\.)?\w+\@\w+\.\w+){1,}/
         return regex.test(str)
     },
     fnValidationUsername: (str) => {
@@ -20,9 +20,6 @@ const validation = {
         } else {
             Node.classList.remove("d-none")
         }
-    },
-    fnValidationInputEmpty: (Node) => {
-        return Node.value === ''
     }
 }
 export default validation
