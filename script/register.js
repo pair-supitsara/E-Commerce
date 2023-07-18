@@ -37,10 +37,10 @@ btnRegister.addEventListener('click', async function(e){
     const isValidForm = isValidEmail && isValidUsername && isValidPassword && isValidConfirmPassword
     
     /* 2. Is this email registered ? */
-    const isEmailNeverUsed = await fnCheckIsEmailRegistered(inputEmail.value) 
+    const isRegisterComplete = await fnCheckIsRegisteredComplete(inputEmail.value, inputUsername.value, inputPassword.value) 
 
     /* 3. alert message */
-    fnAlertMessage(isValidForm, isEmailNeverUsed)
+    fnAlertMessage(isValidForm, isRegisterComplete)
 })
 
 // #endregion
@@ -69,17 +69,20 @@ function fnValidationConfirmPassword(password, confirmpassword, warningInputConf
     return isValidConfirmPassword
 }
 
-async function fnCheckIsEmailRegistered(email) {
-    const endpoint = 'http://127.0.0.1:3000/api/login/fnRegister'
+async function fnCheckIsRegisteredComplete(email, username, password) {
+    const endpoint = 'http://127.0.0.1:3000/api/authen/fnRegister'
     const json = {
-        username: email
+        username,
+        email,
+        password
     }
-    await api.fnJQueryPostApi(endpoint, json)
+    const result = await api.fnJQueryPostApi(endpoint, json)
+    return result
 }
 
-function fnAlertMessage(isValidForm, isEmailNeverUsed) {
+function fnAlertMessage(isValidForm, isRegisterComplete) {
     let msg = ''
-    if (isValidForm && isEmailNeverUsed) {
+    if (isValidForm && isRegisterComplete) {
         msg = "Register Complete"
     } else {
         msg = "Register Incomplete"
