@@ -25,6 +25,14 @@
             font-size: 0.9rem;
             font-weight: bold;
         }
+        .form-minimal {
+            display: block;
+            width: 100%;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            border-radius: 2rem;
+            border-style: none;
+        }
     </style>
     <link rel="icon" href="./image/Bubblegum-Future.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -33,39 +41,50 @@
     <div >
         <div class="bg-secondary" style="position: relative; height: 100dvh;">
             <div id="registerPage" class="bg-success" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width:50%;">
-                <div class="px-0">
-                    <form class="p-3">
-                        <div class="mb-3">
-                            <label for="inputEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com">
-                            <span class="warning d-none" id="warningInputEmail">email must be form test@domain.com</span>
-                        </div>
-                        <div class="mb-3">
-                            <label for="inputUsername" class="form-label">Username</label>
-                            <input type="text" class="form-control" id="inputUsername" placeholder="username">
-                            <span class="warning d-none" id="warningInputUsername">username must cotain string and digit</span>
-                        </div>
-                        <div class="mb-3">
-                            <label for="inputPassword" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="inputPassword" placeholder="password">
-                            <span class="warning d-none" id="warningInputPassword">username must cotain string, digit, special character and least length 8 character</span>
-                        </div>
-                        <div class="mb-3">
-                            <label for="inputConfirmPassword" class="form-label">Confirm Password</label>
-                            <input type="password" class="form-control" id="inputConfirmPassword" placeholder="confirm password">
-                            <span class="warning d-none" id="warningInputConfirmPassword">confirm password must be equal to password</span>
-                        </div>
-                        <div class="my-3">
-                            <button type="submit" class="btn btn-light w-100 my-3" id="btnRegister">Register</button>
-                            <div class="text-light text-center" id="goPageLogin"><u>I already have an account</u></div>
-                        </div>
-                        
-                    </form>
-                </div>
+                <form class="p-3">
+                    <div class="mb-3">
+                        <label for="inputEmail" class="form-label">Email</label>
+                        <input type="email" class="form-minimal" id="inputEmail" placeholder="name@example.com">
+                        <span class="warning d-none" id="warningInputEmail">email must be form test@domain.com</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputUsername" class="form-label">Username</label>
+                        <input type="text" class="form-minimal" id="inputUsername" placeholder="username">
+                        <span class="warning d-none" id="warningInputUsername">username must cotain string and digit</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputPassword" class="form-label">Password</label>
+                        <input type="password" class="form-minimal" id="inputPassword" placeholder="password">
+                        <span class="warning d-none" id="warningInputPassword">username must cotain string, digit, special character and least length 8 character</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputConfirmPassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-minimal" id="inputConfirmPassword" placeholder="confirm password">
+                        <span class="warning d-none" id="warningInputConfirmPassword">confirm password must be equal to password</span>
+                    </div>
+                    <div class="mt-5 mb-2">
+                        <button type="submit" class="form-minimal" id="btnRegister">Register</button>
+                        <div class="text-light text-center" id="goPageLogin"><u>I already have an account</u></div>
+                    </div> 
+                </form>
             </div>
-            <div id="loginPage" class="bg-success d-none" style="position: relative; height: 100dvh;">
-
-
+            <div id="loginPage" class="bg-success d-none" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width:50%;">
+                <form class="p-3">
+                    <div class="mb-3">
+                        <label for="inputEmailLogin" class="form-label">Email</label>
+                        <input type="email" class="form-minimal" id="inputEmailLogin" placeholder="name@example.com">
+                        <span class="warning d-none" id="warningInputEmailLogin">email must be form test@domain.com</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputPasswordLogin" class="form-label">Password</label>
+                        <input type="password" class="form-minimal" id="inputPasswordLogin" placeholder="password">
+                        <span class="warning d-none" id="warningInputEmailLogin">email must be form test@domain.com</span>
+                    </div>
+                    <div class="mt-5 mb-2">
+                        <button type="submit" class="form-minimal" id="btnLogin">Login</button>
+                        <div class="text-light text-center" id="goPageRegister"><u>Don't have any account ?</u></div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -85,7 +104,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <script type="module" src="./script/register.js"></script>
-    <script type="" src="./script/login.js"></script>
+    <script type="module" src="./script/login.js"></script>
 </body>
 
 </html>
