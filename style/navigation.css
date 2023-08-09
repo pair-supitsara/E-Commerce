@@ -37,24 +37,31 @@ div[class="navigation-items"] {
 /* dropdown */
 .dropdown {
     position: relative;
+    display: none;
 }
-.dropdown-content {
+.visible {
     display: block;
+}
+ul[class="dropdown-content"] {
+    width: 10rem;
     position: absolute;
-    background-color: black;
-    color: white;
-    list-style-type: none;
-    overflow: auto;
-    padding: 0.5rem 2rem;
+    padding: .3rem 0rem;
     top: 0px;
     right: 0px;
     z-index: 1;
+    overflow: auto;
+    background-color: black;
+    color: white;
+    list-style-type: none;
     cursor: pointer;
 }
-.dropdown-content li {
-    padding: 0.2rem 1rem;
+.dropdown-content a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: .2rem 2rem;
     border-bottom: black solid 3px;
 }
-.dropdown-content li:hover {
+.dropdown-content a:hover {
     border-bottom: white solid 3px;
 }
