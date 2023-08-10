@@ -16,6 +16,8 @@ ul[class="navigation-menu"] {
     display: block;
     font-size: 1rem;
     padding: 0.5rem 0rem;
+    color: white;
+    text-decoration: none;
     cursor: pointer;
 }
 div[class="navigation-items"] {

@@ -3,7 +3,7 @@ const navbar = ` <nav class="navigation">
                         <div class="navigation-items">LOGO</div>
                     </div>
                     <ul class="navigation-menu">
-                        <li><a class="navigation-items">Shop</a></li>
+                        <li><a href="../page/shop.html" class="navigation-items">Shop</a></li>
                         <li><a class="navigation-items">Filter</a></li>
                         <li><a class="navigation-items">My cart</a></li>
                         <li><div class="navigation-items" id="dropdown-icon" onclick="document.getElementById('dropdown-menu').classList.toggle('visible');">
