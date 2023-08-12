@@ -11,10 +11,10 @@ const navbar = ` <nav class="navigation">
                             </div>
                             <div class="dropdown " id="dropdown-menu">
                                 <ul class="dropdown-content">
-                                    <li><a href="../page/login.html"><i class="bi bi-cart3"> Login</i></a></li>
-                                    <li><a href="../page/register.html"><i class="bi bi-cart3"> Register</i></a></li>
-                                    <li><a href="../page/register.html"><i class="bi bi-person-circle"> Profile</i></a></li>
-                                    <li><a href="../page/register.html"><i class="bi bi-box-arrow-right"> Logout</i></a></li>
+                                    <li><a href="../page/login.html"><i class="bi bi-cart3"></i> Login</a></li>
+                                    <li><a href="../page/register.html"><i class="bi bi-cart3"></i> Register</a></li>
+                                    <li><a href="../page/register.html"><i class="bi bi-person-circle"></i> Profile</a></li>
+                                    <li><a href="../page/register.html"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
                                 </ul>
                             </div>
                         </li>
