@@ -62,7 +62,6 @@
     display: flex;
     justify-content: space-between;
     width: 20rem;
-    margin: 0 auto;
     border: 1px solid black;
     border-radius: 1rem;
 }
@@ -84,8 +83,48 @@
 .search button:hover {
     background-color: white;
     color: black;
+    cursor: pointer;
 }
 .container {
     display: block;
-    padding: 2rem 4rem;
+    padding: 1.5rem 4rem;
+    
+}
+.rows {
+    margin: 1.7rem 0;
+    display: flex;
+    width: auto;
+    justify-content: center;
+}
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    width: 20%;
+    gap: .2rem .5rem;
+    justify-content: center;
+}
+.tag {
+    font-size: 0.85rem;
+    color: lightgray;
+    border: 1px solid lightgray;
+    border-radius: 1rem;
+    padding: 0.1rem .5rem; 
+}
+.tag:hover {
+    background-color: lightgray;
+    color: white;
+    cursor: pointer;
+}
+.boxs {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    gap: 1rem;
+    justify-content: flex-start;
+}
+.box {
+    display: block;
+    width: 23.5%;
+    height: 150px;
+    background-color: rgb(134, 134, 134);
 }
