@@ -1,10 +1,42 @@
 .container {
-    display: block;
-    height: auto;
+    display: flex;
     max-width: 70%;
-    background-color: lightgray;
-    margin: 0 auto;
-    padding: 2rem 3rem;
+    height: 100%;
+    /* background-color: lightgray; */
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.row {
+    display:flex;
+    width: 80%;
+}
+.col {
+    flex: 50%;
+    padding: 3rem 1rem;
+}
+.col1 {
+    background-color: rgb(202, 77, 224);
+    color: white;
+    width: 100%;
+    position: relative;
+}
+.col1 div {
+    display: block;
+    width: 80%;
+    text-align: end;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.col1 h1:hover {
+    color: blue;
+    cursor: pointer;
+}
+.col2 {
+    background-color: rgb(126, 227, 113);
 }
 .header {
     padding-bottom: 1rem;
@@ -12,7 +44,7 @@
 }
 .container form {
     margin: auto;
-    max-width: 50%;
+    max-width: 80%;
 }
 .form-content {
     padding: .3rem 0rem;

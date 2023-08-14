@@ -1,4 +1,8 @@
 .navigation {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     background-color: rgb(23, 23, 23);
@@ -47,7 +51,6 @@ div[class="navigation-items"] {
 ul[class="dropdown-content"] {
     width: 10rem;
     position: absolute;
-    padding: .3rem 0rem;
     top: 0px;
     right: 0px;
     z-index: 1;
@@ -61,7 +64,7 @@ ul[class="dropdown-content"] {
     display: block;
     text-decoration: none;
     color: white;
-    padding: .2rem 2rem;
+    padding: .5rem 2rem;
     border-bottom: black solid 3px;
 }
 .dropdown-content a:hover {

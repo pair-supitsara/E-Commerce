@@ -1,0 +1,40 @@
+.container {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0;
+
+}   
+.row {
+    margin: 1rem 0rem;
+}
+.boxs {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    gap: 1rem;
+    justify-content: flex-start;
+}
+.box {
+    display: block;
+    width: 23.5%;
+    height: 150px;
+    background-color: rgb(134, 134, 134);
+}
+.footer {
+    display: flex;
+    height: auto;
+    background-color: black;
+    color: white;
+}
+.col {
+    width: 25%;
+    padding: 1rem 3rem;
+}
+.footer-list {
+    font-size: 0.7rem;
+    list-style: none;
+}
+.contacts {
+    padding: .5rem 0;
+}

@@ -13,30 +13,39 @@
     <!-- navigation bar -->
 
     <div class="container">
-        <form>
-            <h3 class="header">Login</h3>
-            
-            <div class="form-content">
-                <label for="inputEmailLogin" class="label-register">Email</label>
-                <input type="email" class="input-login" id="inputEmailLogin" placeholder="name@example.com">
-                
-                <span class="text-warning" id="warningInputEmailLogin">email must be form test@domain.com</span>
-                
-            </div>
-            <div class="form-content">
-                <label for="inputPasswordLogin" class="label-register">Password</label>
-                <input type="password" class="input-login" id="inputPasswordLogin" placeholder="password">
-                <span class="text-warning" id="warningInputEmailLogin">email must be form test@domain.com</span>
-            </div>
-            <div >
-                <button type="submit" class="button-login" id="btnLogin">Login</button>
-                <div class="text-center" id="goPageRegister">
-                    <a class="link-register" href="../page/register.html">Don't have any account ?</a>
+        <div class="row">
+            <div class="col col1">
+                <div>
+                    <h1>Hello, friends</h1>
+                    <p>Sign in and start your journey with us</p>
                 </div>
             </div>
-        </form>
+            <div class="col col2">
+                <form>
+                    <h3 class="header">Login</h3>
+                    
+                    <div class="form-content">
+                        <label for="inputEmailLogin" class="label-register">Email</label>
+                        <input type="email" class="input-login" id="inputEmailLogin" placeholder="name@example.com">
+                        
+                        <span class="text-warning" id="warningInputEmailLogin">email must be form test@domain.com</span>
+                        
+                    </div>
+                    <div class="form-content">
+                        <label for="inputPasswordLogin" class="label-register">Password</label>
+                        <input type="password" class="input-login" id="inputPasswordLogin" placeholder="password">
+                        <span class="text-warning" id="warningInputEmailLogin">email must be form test@domain.com</span>
+                    </div>
+                    <div >
+                        <button type="submit" class="button-login" id="btnLogin">Login</button>
+                        <div class="text-center" id="goPageRegister">
+                            <a class="link-register" href="../page/register.html">Don't have any account ?</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-
     <script src="../script/navigation.js"></script>
     <script src="../script/login.js"></script>
 </body>
