@@ -5,8 +5,9 @@
     z-index: 1;
     display: flex;
     justify-content: space-between;
-    background-color: rgb(23, 23, 23);
+    background-color: #5D43FF;
     color: white;
+    font-size: .8rem;
 }
 div[class="navigation-logo"] {
     display: block;
@@ -15,7 +16,6 @@ div[class="navigation-logo"] {
 ul[class="navigation-menu"] {
     display: flex;
     list-style-type: none;
-    font-size: .8rem;
 }
 .navigation-items {
     display: block;
@@ -25,12 +25,12 @@ ul[class="navigation-menu"] {
     cursor: pointer;
 }
 div[class="navigation-items"] {
-    border-bottom: rgb(23, 23, 23) solid 3px;
+    border-bottom: #5D43FF solid 3px;
     padding-left: .7rem;
     padding-right: .7rem;
 }
 a[class="navigation-items"] {
-    border-bottom: rgb(23, 23, 23) solid 3px;
+    border-bottom: #5D43FF solid 3px;
     padding-left: 3rem;
     padding-right: 3rem;
 }

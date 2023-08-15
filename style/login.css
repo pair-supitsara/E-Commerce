@@ -95,6 +95,7 @@ button[class="button-login"]:hover {
     color: black;
     padding: 0.5rem;
     text-decoration: underline;
+    font-size: .75rem;
 }
 .link-register:hover {
     color: white;

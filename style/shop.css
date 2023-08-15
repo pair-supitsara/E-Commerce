@@ -79,10 +79,11 @@
     border: 0;
     border: 1px solid black;
     border-radius: 1rem;
+    font-weight: 600;
 }
 .search button:hover {
-    background-color: white;
-    color: black;
+    background-color: #7BFF88;
+    color: #5D43FF;
     cursor: pointer;
 }
 .container {
@@ -111,7 +112,8 @@
     padding: 0.1rem .5rem; 
 }
 .tag:hover {
-    background-color: lightgray;
+    background-color: #5D43FF;
+    border: 1px solid #5D43FF;
     color: white;
     cursor: pointer;
 }

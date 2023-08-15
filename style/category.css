@@ -21,6 +21,9 @@
     height: 150px;
     background-color: rgb(134, 134, 134);
 }
+.box:hover {
+    scale: 1.2;
+}
 .footer {
     display: flex;
     height: auto;
