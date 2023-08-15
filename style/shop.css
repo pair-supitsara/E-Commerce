@@ -62,8 +62,11 @@
     display: flex;
     justify-content: space-between;
     width: 20rem;
-    border: 1px solid black;
+    border: 1.5px solid black;
     border-radius: 1rem;
+}
+.search {
+    border: 1.5px solid black;
 }
 .search input {
     width: 20rem;
@@ -77,7 +80,7 @@
     background-color: black;
     color: white;
     border: 0;
-    border: 1px solid black;
+    border: 1.5px solid black;
     border-radius: 1rem;
     font-weight: 600;
 }
