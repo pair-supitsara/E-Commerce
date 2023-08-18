@@ -5,7 +5,7 @@ const navbar = ` <nav class="navigation">
                     <ul class="navigation-menu">
                         <li><a href="../page/shop.html" class="navigation-items">shop</a></li>
                         <li><a href="../page/category.html" class="navigation-items">category</a></li>
-                        <li><a class="navigation-items">my cart</a></li>
+                        <li><a id="navCart" class="navigation-items">my cart</a></li>
                         <li><div class="navigation-items" id="dropdown-icon" onclick="document.getElementById('dropdown-menu').classList.toggle('visible');">
                                 <i class="bi bi-arrow-down-left-square"></i>
                             </div>
@@ -21,3 +21,11 @@ const navbar = ` <nav class="navigation">
                     </ul>             
                 </nav>  `
 document.body.insertAdjacentHTML("afterbegin", navbar);
+
+const cart = document.getElementById("navCart");
+const itemsCart = document.getElementById("itemsCart");
+
+cart.addEventListener('click', function () {
+    itemsCart.classList.toggle('invisible');
+})
+

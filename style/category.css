@@ -21,9 +21,33 @@
     height: 150px;
     background-color: rgb(134, 134, 134);
 }
-.box:hover {
+/* .box:hover {
     scale: 1.2;
+} */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
 }
+button[class="button-dark"] {
+    width: 20%;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    border: 1px solid black;
+    border-radius: 50px;
+    padding: 0.2rem 0rem;
+    margin: auto;
+    transition: 0.5s;
+}
+button[class="button-dark"]:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
 .footer {
     display: flex;
     height: auto;

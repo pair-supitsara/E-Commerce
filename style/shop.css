@@ -1,40 +1,25 @@
-.slider {
-    display: block;
+.slide-wrapper {
+    display:block;
     position: relative;
-    overflow-x: hidden;
 }
 #images {
     display: flex;
     background-color: cornflowerblue;
     width: 100%;
-    height: 100%;
-    animation-name: autoscroll;
-    animation-iteration-count: infinite;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-timing-function:ease-in;
+    height: 250px;
+    overflow-x: hidden;
 }
 .image {
     flex: 1 0 100%;
     width: 100%;
-    height: 30dvh;
+    
 }
 #image1 { background-image: url("../image/pexels-chris-17898743.jpg"); }
 #image2 { background-image: url("../image/pexels-fatih-berat-orer-16767077.jpg"); }
 #image3 { background-image: url("../image/pexels-min-an-1337976.jpg"); }
 #image4 { background-image: url("../image/🏞✨.png"); }
 
-@keyframes autoscroll {
-    0%   { transform: translateX(0); }
-    10%  { transform: translateX(0); }
-    33%  { transform: translateX(calc(-100%)) }
-    43%  { transform: translateX(calc(-100%)) }
-    66%  { transform: translateX(calc(-200%)) }
-    76%  { transform: translateX(calc(-200%)) }
-    90%  { transform: translateX(calc(-300%)) }
-    100% { transform: translateX(calc(-300%)) }
-}
-/* .controller-slide {
+.controller-slide {
     position: absolute;
     width: 120px;
     display: flex;
@@ -57,7 +42,8 @@
 .controller-slide a:hover {
     background-color: rgb(48, 48, 48);
     width: 2rem;
-} */
+}
+
 .search {
     display: flex;
     justify-content: space-between;
