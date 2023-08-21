@@ -52,6 +52,7 @@
 .form-content label, .form-content input {
     display: block;
     width: 100%;
+    letter-spacing: 1px;
 }
 .form-content span {
     display: block;
@@ -80,6 +81,7 @@ button[class="button-login"] {
     border-radius: 50px;
     padding: 0.5rem 0rem;
     transition: 0.5s;
+    letter-spacing: 2px;
 }
 button[class="button-login"]:hover {
     background-color: white;

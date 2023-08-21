@@ -2,22 +2,22 @@
     display:block;
     position: relative;
 }
-#images {
+#slides {
     display: flex;
     background-color: cornflowerblue;
     width: 100%;
     height: 250px;
     overflow-x: hidden;
 }
-.image {
+.slide {
     flex: 1 0 100%;
     width: 100%;
     
 }
-#image1 { background-image: url("../image/pexels-chris-17898743.jpg"); }
-#image2 { background-image: url("../image/pexels-fatih-berat-orer-16767077.jpg"); }
-#image3 { background-image: url("../image/pexels-min-an-1337976.jpg"); }
-#image4 { background-image: url("../image/🏞✨.png"); }
+#slide1 { background-image: url("../image/pexels-chris-17898743.jpg"); }
+#slide2 { background-image: url("../image/pexels-fatih-berat-orer-16767077.jpg"); }
+#slide3 { background-image: url("../image/pexels-min-an-1337976.jpg"); }
+#slide4 { background-image: url("../image/🏞✨.png"); }
 
 .controller-slide {
     position: absolute;

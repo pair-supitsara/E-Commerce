@@ -7,59 +7,75 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../style/grobal.css">
     <link rel="stylesheet" href="../style/navigation.css">
+    <link rel="stylesheet" href="../style/cart.css">
     <link rel="stylesheet" href="../style/shop.css">
+    
 </head>
 <body>
     <!-- navigation bar -->
-        <div class="slide-wrapper">
-            <div id="images">
-                <!-- img background -->
-                <div class="image" id="image1"></div>
-                <div class="image" id="image2"></div>
-                <div class="image" id="image3"></div>
-                <div class="image" id="image4"></div>
-            </div>
-            <div class="controller-slide">
-                <a id="nav1" href="#image1"></a>
-                <a id="nav2" href="#image2"></a>
-                <a id="nav3" href="#image3"></a>
-                <a id="nav4" href="#image4"></a>
-            </div>
+
+    <div id="itemsCart" class="cart">
+        <div class="arrow-icon">
+            <i class="bi bi-arrow-right-square-fill"></i>
         </div>
-        
-
-        <div class="container">
-
-            <div class="rows">
-                <div class="search">
-                    <input type="text"  placeholder="typing keyword...">
-                    <button>Search</button>
-                </div>    
-            </div>
-            
-            <div class="rows">
-                <div class="tags">
-                    <div class="tag">tags111</div>
-                    <div class="tag">tags222</div>
-                    <div class="tag">tags33</div>
-                    <div class="tag">tags4</div>
-                    <div class="tag">tags5</div>
-                    <div class="tag">tag6</div>
-                    <div class="tag">tag7</div>
-                    <div class="tag">tag8</div>
-                </div>
-            </div>
-
-            <div class="boxs">
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-            </div>
-
+        <div id="items" class="items">
+            <!-- Gen item here -->
+        </div>
+        <div id="paginationButton" class="pagination">
+            <!-- gen pagenumber button here -->
         </div>
     </div>
 
+    <div class="slide-wrapper">
+        <div id="slides">
+            <!-- img background -->
+            <div class="slide" id="slide1"></div>
+            <div class="slide" id="slide2"></div>
+            <div class="slide" id="slide3"></div>
+            <div class="slide" id="slide4"></div>
+        </div>
+        <div class="controller-slide">
+            <a id="nav1" href="#slide1"></a>
+            <a id="nav2" href="#slide2"></a>
+            <a id="nav3" href="#slide3"></a>
+            <a id="nav4" href="#slide4"></a>
+        </div>
+    </div>
+    
+
+    <div class="container">
+
+        <div class="rows">
+            <div class="search">
+                <input type="text"  placeholder="typing keyword...">
+                <button>Search</button>
+            </div>    
+        </div>
+        
+        <div class="rows">
+            <div class="tags">
+                <div class="tag">tags111</div>
+                <div class="tag">tags222</div>
+                <div class="tag">tags33</div>
+                <div class="tag">tags4</div>
+                <div class="tag">tags5</div>
+                <div class="tag">tag6</div>
+                <div class="tag">tag7</div>
+                <div class="tag">tag8</div>
+            </div>
+        </div>
+
+        <div class="boxs">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+    </div>
+
+
     <script src="../script/navigation.js"></script>
+    <script type="module" src="../script/shop.js"></script>
 </body>
 </html>

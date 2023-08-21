@@ -1,94 +1,52 @@
 .container {
+    background-color: rgb(255, 255, 255);
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(226, 226, 226);
     display: block;
     height: auto;
-    max-width: 80%;
-    background-color: lightgray;
-    margin: auto;
-    padding: 2rem 4rem;
+    width: 35%;
+    padding: 2rem;
+    border-radius: 1rem;
 }
-/* text */
-.header {
-    padding-bottom: 1rem;
-    font-size: 1.25rem;
-}
-.form-header {
-    font-size: 0.8rem;
-}
-/* space */
-.form-login {
+.form-label {
     display: block;
+    width: 100%;
+    letter-spacing: 1px;
 }
-.form-content {
-    display: block;
-    margin: .5rem 0rem;
+.form-input {
+    width: 100%;
+    padding: 0.3rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    outline-color: #5D43FF;
+    letter-spacing: 1px;
+}
+.form-input:hover {
+    cursor: pointer;
+}
+.form-submit {
+    width: 100%;
+    padding: 0.4rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #5D43FF;
+    color: white;
+    font-size: .9rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+.form-submit:hover {
+    background-color: black;
+    cursor: pointer; 
 }
 .sub-content {
-    display: inline-block;
-    margin: .5rem 0rem;
-}
-/* label */
-.label-register {
-    font-size: 0.75rem;
-}
-/* input */
-.input-register {
-    border: white solid 2px;
-    border-radius: 50px;
-    padding: 0.3rem 0.5rem;
-    margin: 0rem .5rem 0rem 1rem;
-}
-.input-register:focus {
-    outline: none;
-    border: black solid 2px;
-}
-/* select dropdown */
-.select-register { 
-    border: 0px;
-    border-radius: 5px;
-    padding: 0.3rem 0.5rem;
-    margin: 0rem .5rem 0rem 1rem;
-}
-/* size width */
-.width-10 {
-    width: 8rem;
-}
-.width-20 {
-    width: 15rem;
-}
-.width-40 {
-    width: 20rem;
-}
-.width-70 {
-    width: 45rem;
-}
-
-/* button */
-button[class="form-submit"] {
-    width: 100%;
-    background-color: black;
-    color: white;
-    border: 0px;
-    border-radius: 50px;
-    padding: 0.5rem 0rem;
-    transition: 0.5s;
-}
-button[class="form-submit"]:hover {
-    background-color: white;
-    color: black;
-    cursor: pointer;
-}
-
-/* anchor */
-.text-center {
-    text-align: center;  
-}
-.link-login {
-    display: block;
-    color: black;
-    padding: 0.5rem;
-    text-decoration: underline;
-}
-.link-login:hover {
-    color: white;
-    cursor: pointer;
+    margin: 1.1rem 0rem;
 }

@@ -12,6 +12,7 @@ html, body {
     position: relative;
 }
 .text-warning {
+    display: block;
     color: rgb(212, 42, 42);
     font-size: .55rem;
     font-weight: bold;
