@@ -7,31 +7,38 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../style/grobal.css">
     <link rel="stylesheet" href="../style/navigation.css">
-    <link rel="stylesheet" href="../style/register.css">
+    <link rel="stylesheet" href="../style/form.css">
     
 </head>
 <body>
     <!-- navigation bar -->
     <div class="container">
-        <div class="modal">
-            <h2>Register</h2>
-            <div class="sub-content">
-                <label class="form-label" for="">Email</label>
-                <input class="form-input" type="email"/>
-                <span class="text-warning"> email is not invalid email is not invalid</span>
+        <form class="modal">
+            <div class="col-1">
+                <h2 class="header">Register</h2>
+                <div class="sub-content">
+                    <label class="form-label" for="">Email</label>
+                    <input class="form-input" type="email"/>
+                    <span class="text-warning"> email is not invalid email is not invalid</span>
+                </div>
+                <div class="sub-content">
+                    <label class="form-label" for="">Password</label>
+                    <input class="form-input" type="password" />
+                    <span class="text-warning">email is not invalid</span>
+                </div>
+                <div class="sub-content">
+                    <label class="form-label" for="">Confirm Password</label>
+                    <input class="form-input" type="password" />
+                    <span class="text-warning">email is not invalid</span>
+                </div>
+                <div>
+                    <button type="submit" class="form-submit">Register</button>
+                    <div class="text-center" id="goPageLogin">
+                        <a href="../page/login.html">Already have an account ?</a>
+                    </div>
+                </div>
             </div>
-            <div class="sub-content">
-                <label class="form-label" for="">Password</label>
-                <input class="form-input" type="password" />
-                <span class="text-warning">email is not invalid</span>
-            </div>
-            <div class="sub-content">
-                <label class="form-label" for="">Confirm Password</label>
-                <input class="form-input" type="password" />
-                <span class="text-warning">email is not invalid</span>
-            </div>
-            <button class="form-submit">Register</button>
-        </div>
+        </form>
     </div>
 
     <script src="../script/navigation.js"></script>

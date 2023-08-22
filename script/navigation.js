@@ -13,7 +13,7 @@ const navbar = ` <nav class="navigation">
                                 <ul class="dropdown-content">
                                     <li><a href="../page/login.html"><i class="bi bi-cart3"></i> Login</a></li>
                                     <li><a href="../page/register.html"><i class="bi bi-cart3"></i> Register</a></li>
-                                    <li><a href="../page/register.html"><i class="bi bi-person-circle"></i> Profile</a></li>
+                                    <li><a href="../page/profile.html"><i class="bi bi-person-circle"></i> Profile</a></li>
                                     <li><a href="../page/register.html"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
                                 </ul>
                             </div>
@@ -28,4 +28,3 @@ const itemsCart = document.getElementById("itemsCart");
 cart.addEventListener('click', function () {
     itemsCart.classList.toggle('invisible');
 })
-
