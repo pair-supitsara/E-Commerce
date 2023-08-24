@@ -15,12 +15,23 @@
     gap: 1rem;
     justify-content: flex-start;
 }
+
 .box {
     display: block;
     width: 23.5%;
     height: 150px;
     background-color: rgb(134, 134, 134);
+    transition: ease 1s;
+    animation: animateElement ease 1s;
 }
+@keyframes animateElement{
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
 /* .box:hover {
     scale: 1.2;
 } */
@@ -40,6 +51,7 @@ button[class="button-dark"] {
     padding: 0.2rem 0rem;
     margin: auto;
     transition: 0.5s;
+    letter-spacing: 1px;
 }
 button[class="button-dark"]:hover {
     background-color: white;
