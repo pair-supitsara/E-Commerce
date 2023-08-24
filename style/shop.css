@@ -116,6 +116,34 @@
 .box {
     display: block;
     width: 23.5%;
-    height: 150px;
-    background-color: rgb(134, 134, 134);
+    height: auto;
+    /* background-color: rgb(134, 134, 134); */
+    position: relative;
+    cursor: pointer;
+}
+.box-head {
+    display: block;
+    background-color: rgb(255, 255, 255);
+    color: #5D43FF;
+    border: 2px solid #5D43FF;
+    padding: .5rem;
+    height: 10rem;
+    position: relative;
+
+}
+.box-content {
+    display: block;
+    background-color: #5D43FF;
+    color: white;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    height: 0rem;
+    opacity: 0;
+    transition: ease 1s;
+}
+.box:hover .box-content {
+    height: 10rem;
+    opacity: 1;
 }
