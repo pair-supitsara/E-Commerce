@@ -79,6 +79,7 @@
 .container {
     display: block;
     padding: 1.5rem 4rem;
+    overflow: hidden;
     
 }
 .rows {
@@ -124,12 +125,11 @@
 }
 .box-head {
     display: block;
-    background-color: rgb(255, 255, 255);
-    border: 2px solid #5D43FF;
+    background-color: rgb(228, 228, 228);
+    /* border: 2px solid #5D43FF; */
     padding: .5rem;
     height: 10rem;
     position: relative;
-
 }
 .box-content {
     display: block;
@@ -139,18 +139,17 @@
     z-index: 1;
     bottom: 0;
     height: 0rem;
-    opacity: 0;
     transition: ease 1s;
 }
 .box-content p {
+    word-wrap: break-word;
     color: white;
     padding: 1rem;
     opacity: 0;
-    transition: ease 1.2s;
+    transition: ease 1.5s;
 }
 .box:hover .box-content {
-    height: 10rem;
-    opacity: 1;
+    height: 100%;
 }
 .box:hover .box-content p {
     opacity: 1;

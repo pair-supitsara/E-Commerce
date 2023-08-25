@@ -1,5 +1,5 @@
 export class loadmore {
-    constructor(items, element, range) {
+    constructor(items, element, modal, range) {
       this.items = items || [];
       this.startIndex = 0;
       this.ItemPerload = range || 4;
@@ -27,5 +27,5 @@ export class loadmore {
         el.setAttributeNode(attr);
         div.appendChild(el)
     }
-    
+
 }

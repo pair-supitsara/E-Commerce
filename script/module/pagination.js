@@ -53,7 +53,6 @@ export class Pagination {
     }
 
     fnClickPaginationButton(event){
-        console.log(event.target.innerText)
         const pageIndex = event.target.innerText;
         const allPageNumber = document.getElementsByClassName('pagination-item')
         for(let item of allPageNumber){

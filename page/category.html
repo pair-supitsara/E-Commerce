@@ -13,15 +13,28 @@
 <body>
     <!-- navigation bar -->
 
-    <div id="itemsCart" class="cart">
-        <div class="arrow-icon">
-            <i class="bi bi-arrow-right-square-fill"></i>
+    <button id="navCart" class="basket">
+        <i class="bi bi-basket2-fill"></i>
+    </button>
+    <div id="modalCart" class="backdrop">
+        <div id="itemsCart" class="cart">
+            <div id="modalCalcel" class="x-square-icon">
+                <i class="bi bi-x-square-fill"></i>
+            </div>
+            <div id="items" class="items">
+                <!-- Gen item here -->
+            </div>
+            <div id="paginationButton" class="pagination">
+                <!-- gen pagenumber button here -->
+            </div>
         </div>
-        <div id="items" class="items">
-            <!-- Gen item here -->
-        </div>
-        <div id="paginationButton" class="pagination">
-            <!-- gen pagenumber button here -->
+    </div>
+
+    <div id="modalProduct" class="backdrop">
+        <div id="itemsCart" class="cart">
+            <div id="modalCalcel" class="x-square-icon">
+                <i class="bi bi-x-square-fill"></i>
+            </div>
         </div>
     </div>
 

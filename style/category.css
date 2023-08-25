@@ -20,7 +20,7 @@
     display: block;
     width: 23.5%;
     height: 150px;
-    background-color: rgb(134, 134, 134);
+    background-color: rgb(228, 228, 228);
     transition: ease 1s;
     animation: animateElement ease 1s;
 }
@@ -31,10 +31,7 @@
     100% {
       opacity:1;
     }
-  }
-/* .box:hover {
-    scale: 1.2;
-} */
+}
 .flex-center {
     display: flex;
     justify-content: center;
@@ -52,6 +49,7 @@ button[class="button-dark"] {
     margin: auto;
     transition: 0.5s;
     letter-spacing: 1px;
+    box-shadow: 1px 1px 10px rgb(115, 115, 115);
 }
 button[class="button-dark"]:hover {
     background-color: white;

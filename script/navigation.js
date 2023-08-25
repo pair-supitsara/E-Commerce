@@ -1,3 +1,12 @@
+let isLogin = true
+
+let list = ` <li><a href="../page/login.html"><i class="bi bi-cart3"></i> Login</a></li>
+             <li><a href="../page/register.html"><i class="bi bi-cart3"></i> Register</a></li>`
+if (isLogin) {
+    list = ` <li><a href="../page/profile.html"><i class="bi bi-person-circle"></i> Profile</a></li>
+             <li><a><i class="bi bi-box-arrow-right"></i> Logout</a></li> `
+}
+
 const navbar = ` <nav class="navigation">
                     <div class="navigation-logo">
                         <div class="navigation-items">LOGO</div>
@@ -5,16 +14,12 @@ const navbar = ` <nav class="navigation">
                     <ul class="navigation-menu">
                         <li><a href="../page/shop.html" class="navigation-items">shop</a></li>
                         <li><a href="../page/category.html" class="navigation-items">category</a></li>
-                        <li><a id="navCart" class="navigation-items">my cart</a></li>
                         <li><div class="navigation-items" id="dropdown-icon" onclick="document.getElementById('dropdown-menu').classList.toggle('visible');">
                                 <i class="bi bi-arrow-down-left-square"></i>
                             </div>
                             <div class="dropdown " id="dropdown-menu">
                                 <ul class="dropdown-content">
-                                    <li><a href="../page/login.html"><i class="bi bi-cart3"></i> Login</a></li>
-                                    <li><a href="../page/register.html"><i class="bi bi-cart3"></i> Register</a></li>
-                                    <li><a href="../page/profile.html"><i class="bi bi-person-circle"></i> Profile</a></li>
-                                    <li><a href="../page/register.html"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+                                    ${list}
                                 </ul>
                             </div>
                         </li>
@@ -23,8 +28,12 @@ const navbar = ` <nav class="navigation">
 document.body.insertAdjacentHTML("afterbegin", navbar);
 
 const cart = document.getElementById("navCart");
-const itemsCart = document.getElementById("itemsCart");
+const modalCart = document.getElementById("modalCart");
+const cancel = document.getElementById("modalCalcel");
 
 cart.addEventListener('click', function () {
-    itemsCart.classList.toggle('invisible');
+    modalCart.classList.toggle('invisible');
+})
+cancel.addEventListener('click', function () {
+    modalCart.classList.toggle('invisible');
 })
