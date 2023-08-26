@@ -26,14 +26,3 @@ const navbar = ` <nav class="navigation">
                     </ul>             
                 </nav>  `
 document.body.insertAdjacentHTML("afterbegin", navbar);
-
-const cart = document.getElementById("navCart");
-const modalCart = document.getElementById("modalCart");
-const cancel = document.getElementById("modalCalcel");
-
-cart.addEventListener('click', function () {
-    modalCart.classList.toggle('invisible');
-})
-cancel.addEventListener('click', function () {
-    modalCart.classList.toggle('invisible');
-})

@@ -30,7 +30,7 @@ export class Pagination {
     }
 
     fnCreateItemInCart(parent, index) {
-        const html = `<div class='item'>
+        const html = `<div class='item' id='${index}'>
                         <div class='image'></div>
                         <div class='detail-item'>${index}</div>
                     </div>`

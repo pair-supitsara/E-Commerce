@@ -21,10 +21,13 @@ export class loadmore {
 
     fnCreateBox(div, index) {
         const el = document.createElement("div");
-        const attr = document.createAttribute("class");    
-        attr.value = "box"; /* class box */
-        el.innerText = "index" + index;  
-        el.setAttributeNode(attr);
+        const attrClass = document.createAttribute("class");    
+        attrClass.value = "box"; /* class box */
+        el.setAttributeNode(attrClass);
+        const attrId = document.createAttribute("id");    
+        attrId.value = "box"+index; /* class box */
+        el.setAttributeNode(attrId);
+        el.innerText = "index" + index;
         div.appendChild(el)
     }
 

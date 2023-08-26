@@ -5,10 +5,10 @@
     height: 100%;
     background: rgba(108, 108, 108, 0.5);
 }
-.invisible {
+.visible {
     display: block !important;
 }
-.cart {
+.card {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -16,19 +16,129 @@
     display: flex; /* toggle flex */
     flex-direction: column;
     align-items: center;
-    gap: .7rem;
-    padding: 2rem 2rem;
+    /* gap: .7rem; */
+    /* padding: 2rem 2rem; */
     width: 450px;
     height: 80%;
     background-color: rgb(227, 227, 227);
     /* border: 1px solid black; */
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     box-shadow: 1px 1px 10px rgb(115, 115, 115);
     z-index: 2;
 }
+.card-header {
+    height: 5%;
+    width: 100%;
+}
+.card-detail {
+    display: flex;
+    flex-direction: column;
+    height: 95%;
+    width: 100%;
+    padding: 1rem;
+}
+.add-to-cart {
+    display: flex;
+}
+.card-img {
+    display: block;
+    width: 40%;
+    height: 100%;
+    background-color: #cccccc;
+    /* box-shadow: 5px 5px black; */
+    align-self: center;
+}
+.card-rows {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: .5rem;
+}
+.card-row {
+    display: flex;
+    margin: 0rem;
+}
+.card-row .topic {
+    width: 40%;
+    font-size: .8rem;
+    font-weight: 600;
+    margin: auto;
+}
+.card-row .choice {
+    width: 60%;
+}
+input[type=number] {
+    appearance: text-field;
+}
+.choice-size span {
+    display: inline-block;
+    width: 1.2rem;
+    font-size: .7rem;
+    text-align: center;
+    color: grey;
+    border: 1px solid grey;
+    border-radius: .2rem;
+    padding: .2rem;
+    margin-right: .4rem;
+}
+.choice-color span {
+    background-color: #7BFF88;
+    border: 1px solid grey;
+    border-radius: .2rem;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    padding: .6rem;
+    margin-right: .5rem;
+}
+.choice-count input {
+    width: 4rem;
+    border: 1px solid black;
+    border-radius: .2rem;
+    padding: .1rem;
+}
+.choice-count span {
+    display: inline-block;
+    background-color: #5D43FF;
+    width: 1rem;
+    font-size: .7rem;
+    font-weight: 600;
+    text-align: center;
+    border-radius: .2rem;
+    padding: .2rem;
+    color:white;
+}
+.card-row button {
+    width: 100%;
+    background-color: #5D43FF;
+    color: white;
+    border: 0px;
+    border-radius: .2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: .2rem;
+}
+.choice-count span:hover , .card-row button:hover {
+    background-color: black;
+    cursor: pointer;
+}
+.reviews {
+    display: block;
+    height: 20rem;
+    overflow-y: scroll;
+    scrollbar-color: #5D43FF rgb(254, 254, 254);
+    scrollbar-width: thin;
+    padding: 1rem;
+}
+.review {
+    margin: .5rem 0;
+    font-size: .7rem;
+}
 .x-square-icon {
+    padding: .5rem;
     color: #5D43FF;
-    align-self: end;
+    float: right;
 }
 .x-square-icon:hover {
     color: black;
@@ -39,7 +149,7 @@
     flex-direction: column;
     row-gap: 1rem;
     width: 100%;
-    height: 100%;
+    height: 90%;
 }
 .item {
     display: flex;
@@ -62,8 +172,10 @@
     background-color: #7BFF88;
 }
 .pagination {
+    height: 10%;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.4rem;
 }
 .pagination span:hover {

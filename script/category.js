@@ -1,4 +1,6 @@
 
+// load more
+
 import { loadmore } from "./module/loadmore.js"
 
 let itemsBestSeller = [0,1,2,3,4,5,6,7,8,9]
@@ -42,4 +44,50 @@ const pagination = new Pagination(itemsInCart, itemsPerPage, parentCart, btPagin
 pagination.fnInitItemsPerPageInCart()
 pagination.fnInitPaginiationButton()
 
+// click backdrop always close modal
 
+const modalCart = document.getElementById("modalCart")
+modalCart.addEventListener('click', function(event){
+    if(!event.target.closest('.card')
+        || event.target.closest('.x-square-icon')) {
+        fnCloseAllModal()
+    }
+})
+
+const modalProduct = document.getElementById("modalProduct")
+
+modalProduct.addEventListener('click', function(event){
+    if(!event.target.closest('.card') 
+        || event.target.closest('.x-square-icon')) {
+        fnCloseAllModal()
+    }
+})
+
+function fnCloseAllModal(){
+    const backdrop = document.querySelectorAll(".backdrop")
+    backdrop.forEach((element) => {
+        console.log(element)
+        element.classList.remove('visible')
+    });
+}
+
+// click cart button always toggle class
+
+const cart = document.getElementById("navCart");
+cart.addEventListener('click', function () {
+    modalCart.classList.toggle('visible');
+})
+
+// open product modal
+const boxs = document.querySelectorAll(".container")[0];
+boxs.addEventListener('click', function(event){
+    const item = event.target.closest('.box')
+    if(item){
+        fnOpenProductModal(item.id)
+    }
+})
+
+function fnOpenProductModal(id){
+    const modalProduct = document.getElementById("modalProduct")
+    modalProduct.classList.add('visible')
+}

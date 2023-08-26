@@ -24,6 +24,9 @@
     transition: ease 1s;
     animation: animateElement ease 1s;
 }
+.box:hover {
+    cursor: pointer;
+}
 @keyframes animateElement{
     0% {
       opacity:0;
