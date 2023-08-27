@@ -13,6 +13,9 @@ const load1 = new loadmore(itemsBestSeller, divBestSeller)
 load1.init()
 btBestSeller.addEventListener('click', function(){
     load1.fnLoadItems()
+    if(itemsBestSeller.length == divBestSeller.children.length){
+        fnNoContentHideLoadmore(this)
+    }
 })
 
 const divOnSale = document.getElementById("onSale")
@@ -21,6 +24,9 @@ const load2 = new loadmore(itemsOnsale, divOnSale)
 load2.init()
 btOnSale.addEventListener('click', function(){
     load2.fnLoadItems()
+    if(itemsOnsale.length == divOnSale.children.length){
+        fnNoContentHideLoadmore(this)
+    }
 })
 
 const divNewArrive = document.getElementById("NewArrive")
@@ -29,7 +35,14 @@ const load3 = new loadmore(itemsNewArrive, divNewArrive)
 load3.init()
 btNewArrive.addEventListener('click', function(){
     load3.fnLoadItems()
+    if(itemsNewArrive.length == divNewArrive.children.length){
+        fnNoContentHideLoadmore(this)
+    }
 })
+
+function fnNoContentHideLoadmore(obj){
+    obj.classList.add('invisible')
+}
 
 // pagination
 
@@ -63,19 +76,25 @@ modalProduct.addEventListener('click', function(event){
     }
 })
 
-function fnCloseAllModal(){
-    const backdrop = document.querySelectorAll(".backdrop")
-    backdrop.forEach((element) => {
-        console.log(element)
-        element.classList.remove('visible')
-    });
-}
 
+const backdrop = document.getElementById("backdrop")
+backdrop.addEventListener('click', function(event){
+    if(!event.target.closest('.card') 
+        || event.target.closest('.x-square-icon')) {
+        fnCloseAllModal()
+    }
+})
+
+function fnCloseAllModal(){
+    backdrop.classList.remove('visible')
+}
 // click cart button always toggle class
 
 const cart = document.getElementById("navCart");
 cart.addEventListener('click', function () {
-    modalCart.classList.toggle('visible');
+    backdrop.classList.add('visible')
+    modalProduct.classList.remove('visible');
+    modalCart.classList.add('flex-visible');
 })
 
 // open product modal
@@ -88,6 +107,7 @@ boxs.addEventListener('click', function(event){
 })
 
 function fnOpenProductModal(id){
+    backdrop.classList.add('visible')
     const modalProduct = document.getElementById("modalProduct")
     modalProduct.classList.add('visible')
 }

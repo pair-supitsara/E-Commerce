@@ -30,5 +30,4 @@ export class loadmore {
         el.innerText = "index" + index;
         div.appendChild(el)
     }
-
 }

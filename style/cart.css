@@ -8,12 +8,15 @@
 .visible {
     display: block !important;
 }
+.flex-visible {
+    display: flex !important;
+}
 .card {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    display: flex; /* toggle flex */
+    display: none; /* toggle flex */
     flex-direction: column;
     align-items: center;
     /* gap: .7rem; */
@@ -39,6 +42,7 @@
 }
 .add-to-cart {
     display: flex;
+    margin: 1rem;
 }
 .card-img {
     display: block;
@@ -60,13 +64,13 @@
     margin: 0rem;
 }
 .card-row .topic {
-    width: 40%;
+    width: 35%;
     font-size: .8rem;
     font-weight: 600;
     margin: auto;
 }
 .card-row .choice {
-    width: 60%;
+    width: 65%;
 }
 input[type=number] {
     appearance: text-field;
@@ -123,13 +127,16 @@ input[type=number] {
     background-color: black;
     cursor: pointer;
 }
+.description {
+    margin: 1rem 1rem 0 1rem;
+}
 .reviews {
     display: block;
     height: 20rem;
     overflow-y: scroll;
     scrollbar-color: #5D43FF rgb(254, 254, 254);
     scrollbar-width: thin;
-    padding: 1rem;
+    margin: 1rem;
 }
 .review {
     margin: .5rem 0;

@@ -10,6 +10,11 @@ html, body {
     font-family: Arial, Helvetica, sans-serif;
     margin: auto;
     position: relative;
+    scrollbar-color: #5D43FF rgb(254, 254, 254);
+    scrollbar-width: thin;
+}
+.invisible {
+    display: none !important;
 }
 .text-warning {
     display: block;
