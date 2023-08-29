@@ -111,3 +111,11 @@ function fnOpenProductModal(id){
     const modalProduct = document.getElementById("modalProduct")
     modalProduct.classList.add('visible')
 }
+
+import api from './module/requestapi.js'
+
+api.fnfetchPostApi("/ecomerce/fnGetAllItemsInCategory", { })
+
+api.fnfetchPostApi("/ecomerce/fnAddItemsToMyCart", { })
+
+api.fnfetchPostApi("/ecomerce/fnItemsInMyCart", { })

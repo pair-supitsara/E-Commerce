@@ -1,40 +1,31 @@
 
 /* 
     make request to api
+    example: 'http://127.0.0.1:3000/api/controller/endpointname'
 */
-const protocol = window.location.protocol
-const hostname = protocol + '://127.0.0.1:3000/api/demo/fnDemo'
-
-
+const hostname = 'http://127.0.0.1:3000/api'
 const api = {
-    fnfetchPostApi: async function fnCallAPI(endpoint, data){
-        console.log(endpoint)
-        console.log(data)
+    fnfetchPostApi: async function (endpoint, data){
         return await new Promise((resolve, reject) => {
             try {
-                fetch({
+                fetch(hostname + endpoint,{
                     method: 'POST',
-                    url: endpoint,
+                    body: JSON.stringify(data),
                     headers: {
-                        Accept: 'application.json',
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data)
-                }).then((response) => {
-                    response
-                }).then((json) => {
-                    console.log(json)
-                    return resolve(json)
-                })
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    }
+                }).then((response) =>
+                    response.json()
+                ).then((json) =>
+                    resolve(json)
+                )
             } catch(error){
-                console.log(error)
                 reject(error)
             }
         })
     },    
     fnJQueryPostApi: async function (endpoint, data){
-        console.log(endpoint)
-        console.log(data)
         return await new Promise((resolve, reject) => {
             try {
                 $.post({
