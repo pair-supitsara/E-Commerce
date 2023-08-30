@@ -24,3 +24,48 @@ html, body {
     margin: .2rem 0rem 0 0;
     text-align: end;
 }
+
+/* modal */
+.backdrop {
+    position: fixed;
+    display: none;/* none; */
+    width: 100%;
+    height: 100%;
+    background: rgba(108, 108, 108, 0.5);
+}
+.visible {
+    display: block !important;
+}
+.flex-visible {
+    display: flex !important;
+}
+.card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none; /* toggle flex */
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+    height: 80%;
+    background-color: rgb(227, 227, 227);
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 10px rgb(115, 115, 115);
+    z-index: 2;
+}
+.card-height-auto {
+    height: auto !important;
+}
+.card-header {
+    height: 5%;
+    width: 100%;
+}
+.card-detail {
+    display: flex;
+    flex-direction: column;
+    height: 95%;
+    width: 100%;
+    padding: 1rem;
+}
+/* modal */

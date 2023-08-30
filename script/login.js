@@ -1,13 +1,19 @@
 import api from './module/requestapi.js'
 import validate from './module/validate.js'
+import modal from './module/modal.js'
 
 // #region event listener
+const backdrop = document.getElementById("backdrop")
+const alertModal = document.getElementById("alertModal")
+
 const btnLogin = document.getElementById("btnLogin")
+
 btnLogin.addEventListener('click', async function(event){
     event.preventDefault()
     const inputEmailLogin = document.getElementById("inputEmailLogin").value
     const inputPasswordLogin = document.getElementById("inputPasswordLogin").value
-    await fnAuthen(inputEmailLogin, inputPasswordLogin)
+    modal.fnShowmodal(backdrop, alertModal, 'visible')
+    // await fnAuthen(inputEmailLogin, inputPasswordLogin)
 })
 
 // #endregion
@@ -21,10 +27,8 @@ async function fnAuthen(email, password) {
     if(!isValidPassword) {
         msg += "isValidPassword"
     }
-    alert(msg)
-
     if(msg.length > 0) {
-
+        alert(msg)
     } else {
         const json = {
             email: email,

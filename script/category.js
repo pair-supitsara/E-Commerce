@@ -57,61 +57,35 @@ const pagination = new Pagination(itemsInCart, itemsPerPage, parentCart, btPagin
 pagination.fnInitItemsPerPageInCart()
 pagination.fnInitPaginiationButton()
 
-// click backdrop always close modal
+// modal
 
-const modalCart = document.getElementById("modalCart")
-modalCart.addEventListener('click', function(event){
-    if(!event.target.closest('.card')
-        || event.target.closest('.x-square-icon')) {
-        fnCloseAllModal()
-    }
-})
-
-const modalProduct = document.getElementById("modalProduct")
-
-modalProduct.addEventListener('click', function(event){
-    if(!event.target.closest('.card') 
-        || event.target.closest('.x-square-icon')) {
-        fnCloseAllModal()
-    }
-})
-
+import modal from './module/modal.js'
 
 const backdrop = document.getElementById("backdrop")
 backdrop.addEventListener('click', function(event){
-    if(!event.target.closest('.card') 
-        || event.target.closest('.x-square-icon')) {
-        fnCloseAllModal()
+    if(!event.target.closest('.card') // click backdrop always close modal
+        || event.target.closest('.x-square-icon')) { // click [x] always close modal
+        modal.fnHideModal(backdrop)
     }
 })
-
-function fnCloseAllModal(){
-    backdrop.classList.remove('visible')
-}
-// click cart button always toggle class
-
+const modalCart = document.getElementById("modalCart")
 const cart = document.getElementById("navCart");
 cart.addEventListener('click', function () {
-    backdrop.classList.add('visible')
-    modalProduct.classList.remove('visible');
-    modalCart.classList.add('flex-visible');
+    modal.fnShowmodal(backdrop, modalCart, 'visible')
 })
-
-// open product modal
+const modalProduct = document.getElementById("modalProduct")
 const boxs = document.querySelectorAll(".container")[0];
 boxs.addEventListener('click', function(event){
     const item = event.target.closest('.box')
     if(item){
-        fnOpenProductModal(item.id)
+        console.log(item.id)
+        modal.fnShowmodal(backdrop, modalProduct, 'visible')
     }
 })
 
-function fnOpenProductModal(id){
-    backdrop.classList.add('visible')
-    const modalProduct = document.getElementById("modalProduct")
-    modalProduct.classList.add('visible')
-}
+// call api
 
+/*
 import api from './module/requestapi.js'
 
 api.fnfetchPostApi("/ecomerce/fnGetAllItemsInCategory", { })
@@ -119,3 +93,4 @@ api.fnfetchPostApi("/ecomerce/fnGetAllItemsInCategory", { })
 api.fnfetchPostApi("/ecomerce/fnAddItemsToMyCart", { })
 
 api.fnfetchPostApi("/ecomerce/fnItemsInMyCart", { })
+*/
