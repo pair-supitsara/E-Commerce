@@ -1,28 +1,37 @@
 import api from './module/requestapi.js'
+import validate from './module/validate.js'
 
 // #region event listener
-const pageRegister = document.getElementById("registerPage")
-const pageLogin = document.getElementById("loginPage")
-
-const goPageLogin = document.getElementById("goPageLogin")
-goPageLogin.addEventListener('click', async function() {
-    pageLogin.classList.remove('d-none')
-    pageRegister.classList.add('d-none')
-})
-
-const goPageRegister = document.getElementById("goPageRegister")
-goPageRegister.addEventListener('click', async function() {
-    pageLogin.classList.add('d-none')
-    pageRegister.classList.remove('d-none')
+const btnLogin = document.getElementById("btnLogin")
+btnLogin.addEventListener('click', async function(event){
+    event.preventDefault()
+    const inputEmailLogin = document.getElementById("inputEmailLogin").value
+    const inputPasswordLogin = document.getElementById("inputPasswordLogin").value
+    await fnAuthen(inputEmailLogin, inputPasswordLogin)
 })
 
 // #endregion
-
-async function fnLogin(email, password) {
-    const endpoint = 'http://127.0.0.1:3000/api/authen/fnLogin'
-    const json = {
-        email,
-        password
+async function fnAuthen(email, password) {
+    const isValidEmail = validate.fnValidationEmail(email)
+    let msg = ""
+    if(!isValidEmail) {
+        msg += "isValidEmail"
     }
-    const result = await api.fnJQueryPostApi(endpoint, json) 
+    const isValidPassword = validate.fnValidationPassword(password)
+    if(!isValidPassword) {
+        msg += "isValidPassword"
+    }
+    alert(msg)
+
+    if(msg.length > 0) {
+
+    } else {
+        const json = {
+            email: email,
+            password: password
+        }
+        const response = await api.fnfetchPostApi("/authen/fnLogin", json)
+        console.log(response)
+    }
+
 }

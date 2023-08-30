@@ -26,14 +26,16 @@
                 <div class="sub-content">
                     <label for="inputEmailLogin" class="form-label">Email</label>
                     <input type="email" class="form-input" id="inputEmailLogin" placeholder="name@example.com">
-                    <span class="text-warning" id="warningInputEmailLogin">email must be form test@domain.com</span>
+                    <span class="text-warning" id="warningInputEmailLogin">Invalid email address</span>
                 </div>
                 <div class="sub-content">
                     <label for="inputPasswordLogin" class="form-label">Password</label>
                     <input type="password" class="form-input" id="inputPasswordLogin" placeholder="password">
-                    <span class="text-warning" id="warningInputEmailLogin">email must be form test@domain.com</span>
+                    <span class="text-warning tooltip" id="warningInputEmailLogin">Passwords is invalid
+                        <span class="tooltiptext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime delectus a alias repudiandae tenetur earum? Ea quam quas delectus eveniet, assumenda minus laborum consequuntur dolore. Ad officia quae itaque quod.</span>
+                    </span>
                 </div>
-                <div>
+                <div class="sub-content">
                     <button type="submit" class="form-submit" id="btnLogin">Login</button>
                     <div class="text-center" id="goPageRegister">
                         <a href="../page/register.html">Don't have any account ?</a>
@@ -43,6 +45,6 @@
         </div>
     </div>
     <script src="../script/navigation.js"></script>
-    <script src="../script/login.js"></script>
+    <script type="module" src="../script/login.js"></script>
 </body>
 </html>

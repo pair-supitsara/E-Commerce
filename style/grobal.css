@@ -19,8 +19,8 @@ html, body {
 .text-warning {
     display: block;
     color: rgb(212, 42, 42);
-    font-size: .55rem;
+    font-size: .6rem;
     font-weight: bold;
-    margin: .2rem 1rem 0 0;
+    margin: .2rem 0rem 0 0;
     text-align: end;
 }

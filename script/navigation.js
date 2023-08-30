@@ -1,4 +1,4 @@
-let isLogin = true
+let isLogin = false
 
 let list = ` <li><a href="../page/login.html"><i class="bi bi-cart3"></i> Login</a></li>
              <li><a href="../page/register.html"><i class="bi bi-cart3"></i> Register</a></li>`
