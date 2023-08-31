@@ -24,16 +24,18 @@ btnLogin.addEventListener('click', async function(event){
 async function fnAuthen(email, password) {
     const alertMsg = document.getElementById("alertMsg")
 
-    const isValidEmail = validate.fnValidationEmail(email)
+    const checkedEmail = validate.fnValidateEmail(email)
     let msg = ""
-    if(!isValidEmail) {
-        msg += `<li style="margin-left: 35px;">email</li>`
+    if(!checkedEmail.isvalid) {
+        for(let i=0 ; i<checkedEmail.message.length ; i++) {
+            msg += `<li style="margin-left: 35px;">${checkedEmail.message[i]}</li>`
+        }
     }
-    const isValidPassword = validate.fnValidationPassword(password)
-
-    if(!isValidPassword) {
-        msg += `<li style="margin-left: 35px;">password</li>`
-        console.log(msg)
+    const checkedPw = validate.fnValidatePassword(password)
+    if(!checkedPw.isvalid) {
+        for(let i=0 ; i<checkedPw.message.length ; i++) {
+            msg += `<li style="margin-left: 35px;">${checkedPw.message[i]}</li>`
+        }
     }
     if(msg.length > 0) {
         alertMsg.innerHTML = `  <div style="">Please enter valid following</div>

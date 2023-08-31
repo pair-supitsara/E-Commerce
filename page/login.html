@@ -48,7 +48,14 @@
                     <label for="inputPasswordLogin" class="form-label">Password</label>
                     <input type="password" class="form-input" id="inputPasswordLogin" placeholder="password">
                     <span class="text-warning tooltip" id="warningInputEmailLogin">Passwords is invalid
-                        <span class="tooltiptext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime delectus a alias repudiandae tenetur earum? Ea quam quas delectus eveniet, assumenda minus laborum consequuntur dolore. Ad officia quae itaque quod.</span>
+                        <span class="tooltiptext">
+                            Passwords must contain:<br>
+                            - a minimum of 1 lowercase letter [a-z]<br>
+                            - a minimum of 1 uppercase letter [A-Z]<br>
+                            - a minimum of 1 numeric character [0-9]<br>
+                            - a minimum of 1 special character: ~`!@#$%^&*()-_+={}[]|\;:"<>,./?<br>
+                            - Passwords must be at least 8 characters in length
+                        </span>
                     </span>
                 </div>
                 <div class="sub-content">
