@@ -23,7 +23,7 @@
                 1111
             </div>
             <div class="card-footer">
-                <button type="submit" class="form-submit">OK</button>
+                <button type="submit" class="form-submit x-square-icon">OK</button>
             </div>
         </div>
     </div>
@@ -41,22 +41,32 @@
                 
                 <div class="sub-content">
                     <label for="inputEmailLogin" class="form-label">Email</label>
-                    <input type="email" class="form-input" id="inputEmailLogin" placeholder="name@example.com">
-                    <span class="text-warning" id="warningInputEmailLogin">Invalid email address</span>
+                    <div class="parent-input-info">
+                        <input type="email" id="inputEmailLogin" placeholder="name@example.com">
+                        <span class="bi bi-info-square-fill tooltip">
+                            <span class="tooltiptext">
+                                Invalid email address
+                            </span>
+                        </span>
+                    </div>
+                    <!-- <span class="text-warning" id="warningInputEmailLogin">Invalid email address</span> -->
                 </div>
                 <div class="sub-content">
                     <label for="inputPasswordLogin" class="form-label">Password</label>
-                    <input type="password" class="form-input" id="inputPasswordLogin" placeholder="password">
-                    <span class="text-warning tooltip" id="warningInputEmailLogin">Passwords is invalid
-                        <span class="tooltiptext">
-                            Passwords must contain:<br>
-                            - a minimum of 1 lowercase letter [a-z]<br>
-                            - a minimum of 1 uppercase letter [A-Z]<br>
-                            - a minimum of 1 numeric character [0-9]<br>
-                            - a minimum of 1 special character: ~`!@#$%^&*()-_+={}[]|\;:"<>,./?<br>
-                            - Passwords must be at least 8 characters in length
+                    <div class="parent-input-info">
+                        <input type="password" id="inputPasswordLogin" placeholder="password">
+                        <span class="bi bi-info-square-fill tooltip">
+                            <span class="tooltiptext">
+                                Passwords must contain:<br>
+                                - a minimum of 1 lowercase letter [a-z]<br>
+                                - a minimum of 1 uppercase letter [A-Z]<br>
+                                - a minimum of 1 numeric character [0-9]<br>
+                                - a minimum of 1 special character: ~`!@#$%^&*()-_+={}[]|\;:"<>,./?<br>
+                                - Passwords must be at least 8 characters in length
+                            </span>
                         </span>
-                    </span>
+                    </div>
+                    <!-- <span class="text-warning tooltip" id="warningInputEmailLogin">Passwords is invalid</span> -->
                 </div>
                 <div class="sub-content">
                     <button type="submit" class="form-submit" id="btnLogin">Login</button>

@@ -65,13 +65,12 @@ html, body {
     height: 3%;
     width: 100%;
 }
-.x-square-icon {
-    padding: .5rem;
+.x-square-icon i{
     color: #5D43FF;
     float: right;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
-.x-square-icon:hover {
+.x-square-icon i:hover {
     color: black;
     cursor: pointer;
 }
@@ -80,6 +79,6 @@ html, body {
     flex-direction: column;
     height: 97%;
     width: 100%;
-    padding: 1rem;
+    padding: .5rem 0;
 }
 /* modal */

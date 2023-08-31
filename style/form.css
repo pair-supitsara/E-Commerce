@@ -17,6 +17,7 @@
 .form-label {
     display: block;
     width: 100%;
+    font-size: .8rem;
     letter-spacing: 1px;
 }
 .form-input {
@@ -30,6 +31,30 @@
 .form-input:hover {
     cursor: pointer;
 }
+.parent-input-info {
+    width: 100%;
+    --icon: 1.5rem;
+
+    background-color: white;
+    padding: 0.3rem;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.parent-input-info input {
+    width: calc( 100% - var(--icon) );
+    border: 0;
+    outline: none;
+    letter-spacing: 1px;
+}
+.parent-input-info span {
+    width: var(--icon);
+    font-size: 1.2rem;
+    vertical-align: middle !important;
+}
+.parent-input-info span:hover {
+    color: #5D43FF;
+}
+
 .form-submit {
     width: 100%;
     padding: 0.4rem;
@@ -111,6 +136,7 @@
 /* tooltip */
 .tooltip {
     position: relative;
+    cursor: pointer;
 }
   
 .tooltip .tooltiptext {
@@ -121,23 +147,13 @@
     text-align: start;
     border-radius: 6px;
     padding: 10px;
-    font-size: .8rem;
+    font-size: .6rem;
     position: absolute;
     z-index: 1;
     top: -5px;
-    left: 102%;
+    left: 30px;
 }
 
-.tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 8%;
-    right: 100%;
-    margin-top: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent black transparent transparent;
-}
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
