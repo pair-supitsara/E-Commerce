@@ -47,6 +47,20 @@ const validation = {
             isvalid: bool,
             message: msg
         }
+    },
+    fnValidateConfirmPassword: (pw, cfpw) => {
+        let bool = true
+        let msg = []
+        if (pw !== cfpw) {
+            msg.push('confirm password is not equal')
+            bool &&= false
+        }
+        return {
+            password: pw,
+            confirmpassword: cfpw,
+            isvalid: bool,
+            message: msg
+        }
     }
 }
 export default validation

@@ -12,24 +12,87 @@
 </head>
 <body>
     <!-- navigation bar -->
+
+    <div id="backdrop" class="backdrop">
+        <div id="alertModal" class="card card-height-auto card-padding">
+            <div class="card-header">
+                <div class="x-square-icon">
+                    <i class="bi bi-x-square-fill"></i>
+                </div>
+            </div>
+            <div id="alertMsg" class="card-detail">
+                <!-- create message from js -->
+            </div>
+            <div class="card-footer">
+                <button type="submit" class="form-submit x-square-icon">OK</button>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <form class="modal">
             <div class="col-1">
                 <h2 class="header">Register</h2>
                 <div class="sub-content">
                     <label class="form-label" for="">Email</label>
-                    <input class="form-input" type="email"/>
-                    <span class="text-warning"> email is not invalid email is not invalid</span>
+                    <div class="parent-input-info">
+                        <input type="email" id="inputEmailRegister" placeholder="name@example.com">
+                        <span class="bi bi-info-square-fill tooltip">
+                            <span class="tooltiptext tooltiptext-width-auto">
+                                name@domain.com
+                            </span>
+                        </span>
+                    </div>
+                    <!-- <span class="text-warning"> email is not invalid email is not invalid</span> -->
                 </div>
                 <div class="sub-content">
                     <label class="form-label" for="">Password</label>
-                    <input class="form-input" type="password" />
-                    <span class="text-warning">email is not invalid</span>
+
+                    <div class="parent-input-info">
+                        <div class="parent-input-info-input">
+                            <input type="password" id="inputPasswordRegister" placeholder="password">
+                        </div>
+                        <div class="parent-input-info-icon" onclick="fnRevealPassword('inputPasswordRegister')">
+                            <span class="bi bi-eye-fill open-eye"></span>
+                        </div>
+                        <div class="parent-input-info-icon">
+                            <span class="bi bi-info-square-fill tooltip">
+                                <span class="tooltiptext">
+                                    Passwords must contain:<br>
+                                    - a minimum of 1 lowercase letter [a-z]<br>
+                                    - a minimum of 1 uppercase letter [A-Z]<br>
+                                    - a minimum of 1 numeric character [0-9]<br>
+                                    - a minimum of 1 special character: ~`!@#$%^&*()-_+={}[]|\;:"<>,./?<br>
+                                    - Passwords must be at least 8 characters in length
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- <span class="text-warning">email is not invalid</span> -->
                 </div>
                 <div class="sub-content">
                     <label class="form-label" for="">Confirm Password</label>
-                    <input class="form-input" type="password" />
-                    <span class="text-warning">email is not invalid</span>
+                    <div class="parent-input-info">
+                        <div class="parent-input-info-input">
+                            <input type="password" id="inputConfirmPasswordRegister" placeholder="password">
+                        </div>
+                        <div class="parent-input-info-icon" onclick="fnRevealPassword('inputConfirmPasswordRegister')">
+                            <span class="bi bi-eye-fill open-eye"></span>
+                        </div>
+                        <div class="parent-input-info-icon">
+                            <span class="bi bi-info-square-fill tooltip">
+                                <span class="tooltiptext">
+                                    Passwords must contain:<br>
+                                    - a minimum of 1 lowercase letter [a-z]<br>
+                                    - a minimum of 1 uppercase letter [A-Z]<br>
+                                    - a minimum of 1 numeric character [0-9]<br>
+                                    - a minimum of 1 special character: ~`!@#$%^&*()-_+={}[]|\;:"<>,./?<br>
+                                    - Passwords must be at least 8 characters in length
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- <span class="text-warning">email is not invalid</span> -->
                 </div>
                 <div>
                     <button type="submit" class="form-submit">Register</button>
@@ -42,6 +105,7 @@
     </div>
 
     <script src="../script/navigation.js"></script>
-    
+    <script src="../script/form.js"></script>
+    <script src="../script/register.js"></script>
 </body>
 </html>

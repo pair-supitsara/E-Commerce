@@ -8,6 +8,7 @@
     background-color: #5D43FF;
     color: white;
     font-size: .8rem;
+    box-shadow: 1px 1px 10px rgb(115, 115, 115);
 }
 div[class="navigation-logo"] {
     display: block;
