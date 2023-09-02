@@ -34,7 +34,7 @@ const validation = {
             msg.push('password not contain 0-9')
             bool &&= false
         }
-        if (!pw.match(/(?=.*[~`!@#$%^&*()-_+={}[\]|;:"'<>,./?])/g)) {
+        if (!pw.match(/(?=.*[\~\`\!\@\#\$\%\^\&\*\(\)\-\_\+\=\{\}\[\]\|\;\:\"\'\<\>\,\.\/\?])/g)) {
             msg.push('password not contain special characters')
             bool &&= false
         }

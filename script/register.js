@@ -2,20 +2,28 @@ import api from './module/requestapi.js'
 import validate from './module/validate.js'
 import modal from './module/modal.js'
 
+// #region event listener
+const backdrop = document.getElementById("backdrop")
+const alertModal = document.getElementById("alertModal")
+backdrop.addEventListener('click', function(event){
+    if(!event.target.closest('.card') // click backdrop always close modal
+        || event.target.closest('.x-square-icon')) { // click [x] always close modal
+        modal.fnHideModal(backdrop)
+    }
+})
+
 const btnRegister = document.getElementById("btnRegister")
 btnRegister.addEventListener('click', async function(event){
     event.preventDefault()
-    const email = document.getElementById("inputEmailLogin").value
-    const password = document.getElementById("inputPassword").value
-    const confirmPassword = document.getElementById("inputConfirmPassword").value
+    const email = document.getElementById("inputEmailRegister").value
+    const password = document.getElementById("inputPasswordRegister").value
+    const confirmPassword = document.getElementById("inputConfirmPasswordRegister").value
     await fnRegister(email, password, confirmPassword)
 })
 
 // #endregion
 async function fnRegister(email, password, confirmPassword) {
-    const alertModal = document.getElementById("alertModal")
     const alertMsg = document.getElementById("alertMsg")
-    const backdrop = document.getElementById("backdrop")
     
     const checkedEmail = validate.fnValidateEmail(email)
     const checkedPw = validate.fnValidatePassword(password)
@@ -40,7 +48,7 @@ async function fnRegister(email, password, confirmPassword) {
             msg += `<li style="margin-left: 35px;">${checkedCfPw.message[i]}</li>`
         }
     }
-    if (isRegisterSucess) {
+    if (!isRegisterSucess) {
         alertMsg.innerHTML = `  <ul style="">
                                     Please enter valid following
                                     ${ msg }

@@ -25,29 +25,33 @@ async function fnAuthen(email, password) {
     const alertMsg = document.getElementById("alertMsg")
 
     const checkedEmail = validate.fnValidateEmail(email)
-    let msg = ""
+    let errorMsg = ""
     if(!checkedEmail.isvalid) {
         for(let i=0 ; i<checkedEmail.message.length ; i++) {
-            msg += `<li style="margin-left: 35px;">${checkedEmail.message[i]}</li>`
+            errorMsg += `<li style="margin-left: 35px;">${checkedEmail.message[i]}</li>`
         }
     }
     const checkedPw = validate.fnValidatePassword(password)
     if(!checkedPw.isvalid) {
         for(let i=0 ; i<checkedPw.message.length ; i++) {
-            msg += `<li style="margin-left: 35px;">${checkedPw.message[i]}</li>`
+            errorMsg += `<li style="margin-left: 35px;">${checkedPw.message[i]}</li>`
         }
     }
-    if(msg.length > 0) {
-        alertMsg.innerHTML = `  <div style="">Please enter valid following</div>
-                                <ul style="">${msg}</ul>`
+    if(errorMsg.length > 0) {
+        alertMsg.innerHTML = `  <div>Please enter valid following</div>
+                                    <ul>${errorMsg}</ul>`
         modal.fnShowmodal(backdrop, alertModal, 'visible')
     } else {
+        alertMsg.innerHTML = `  <div>Register Sucess!</div>
+        <ul>${1234}</ul>`
+        modal.fnShowmodal(backdrop, alertModal, 'visible')
         const json = {
             email: email,
             password: password
         }
         const response = await api.fnfetchPostApi("/authen/fnLogin", json)
         console.log(response)
+
     }
 
 }

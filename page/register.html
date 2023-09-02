@@ -74,7 +74,7 @@
                     <label class="form-label" for="">Confirm Password</label>
                     <div class="parent-input-info">
                         <div class="parent-input-info-input">
-                            <input type="password" id="inputConfirmPasswordRegister" placeholder="password">
+                            <input type="password" id="inputConfirmPasswordRegister" placeholder="confirm password">
                         </div>
                         <div class="parent-input-info-icon" onclick="fnRevealPassword('inputConfirmPasswordRegister')">
                             <span class="bi bi-eye-fill open-eye"></span>
@@ -95,7 +95,7 @@
                     <!-- <span class="text-warning">email is not invalid</span> -->
                 </div>
                 <div>
-                    <button type="submit" class="form-submit">Register</button>
+                    <button type="submit" class="form-submit" id="btnRegister">Register</button>
                     <div class="text-center" id="goPageLogin">
                         <a href="../page/login.html">Already have an account ?</a>
                     </div>
@@ -106,6 +106,6 @@
 
     <script src="../script/navigation.js"></script>
     <script src="../script/form.js"></script>
-    <script src="../script/register.js"></script>
+    <script type="module" src="../script/register.js"></script>
 </body>
 </html>
