@@ -3,6 +3,11 @@
     padding: 0px;
     box-sizing: border-box;
 }
+:root {
+    /* refer to html element */
+    --purple: #5D43FF;
+    --greenlemon: #7BFF88;
+}
 html, body {
     display: block;
     height: 100%;
@@ -10,7 +15,7 @@ html, body {
     font-family: Arial, Helvetica, sans-serif;
     margin: auto;
     position: relative;
-    scrollbar-color: #5D43FF rgb(254, 254, 254);
+    scrollbar-color: var(--purple) rgb(254, 254, 254);
     scrollbar-width: thin;
 }
 .invisible {
@@ -66,7 +71,7 @@ html, body {
     width: 100%;
 }
 .x-square-icon i{
-    color: #5D43FF;
+    color: var(--purple);
     float: right;
     font-size: 1.2rem;
 }

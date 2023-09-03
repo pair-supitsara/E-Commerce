@@ -45,7 +45,7 @@ input[type=number] {
     margin-right: .4rem;
 }
 .choice-color span {
-    background-color: #7BFF88;
+    background-color: var(--greenlemon);
     border: 1px solid grey;
     border-radius: .2rem;
     display: inline-block;
@@ -62,7 +62,7 @@ input[type=number] {
 }
 .choice-count span {
     display: inline-block;
-    background-color: #5D43FF;
+    background-color: var(--purple);
     width: 1rem;
     font-size: .7rem;
     font-weight: 600;
@@ -73,7 +73,7 @@ input[type=number] {
 }
 .card-row button {
     width: 100%;
-    background-color: #5D43FF;
+    background-color: var(--purple);
     color: white;
     border: 0px;
     border-radius: .2rem;
@@ -92,7 +92,7 @@ input[type=number] {
     display: block;
     height: 20rem;
     overflow-y: scroll;
-    scrollbar-color: #5D43FF rgb(254, 254, 254);
+    scrollbar-color: var(--purple) rgb(254, 254, 254);
     scrollbar-width: thin;
     margin: 1rem;
 }
@@ -116,16 +116,16 @@ input[type=number] {
     display: block;
     height: 100%;
     width: 30%;
-    background-color: #5D43FF;
+    background-color: var(--purple);
 }
 .item > .detail-item {
     display: block;
     height: 100%;
     width: 70%;
-    background-color: #7BFF88;
+    background-color: var(--greenlemon);
 }
 .item > .detail-item:hover {
-    background-color: #7BFF88;
+    background-color: var(--greenlemon);
 }
 .pagination {
     height: 10%;
@@ -138,13 +138,13 @@ input[type=number] {
     cursor: pointer;
 }
 .pagination i {
-    color: #5D43FF;
+    color: var(--purple);
 }
 .pagination i:hover {
     color: black;
 }
 .pagination-item {
-    background-color: #5D43FF;
+    background-color: var(--purple);
     color: white;
     border-radius: .2rem;
     padding: .2rem;
@@ -165,7 +165,7 @@ input[type=number] {
     z-index: 5;
     transform: translate(0%,-50%);
     font-size: 1.5rem;
-    background-color: #5D43FF;
+    background-color: var(--purple);
     color: white;
     border: none;
     border-radius: 0 2rem 2rem 0;

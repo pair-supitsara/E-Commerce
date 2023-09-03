@@ -5,7 +5,7 @@
     z-index: 3;
     display: flex;
     justify-content: space-between;
-    background-color: #5D43FF;
+    background-color: var(--purple);
     color: white;
     font-size: .8rem;
     box-shadow: 1px 1px 10px rgb(115, 115, 115);
@@ -26,12 +26,12 @@ ul[class="navigation-menu"] {
     cursor: pointer;
 }
 div[class="navigation-items"] {
-    border-bottom: #5D43FF solid 3px;
+    border-bottom: var(--purple) solid 3px;
     padding-left: .7rem;
     padding-right: .7rem;
 }
 a[class="navigation-items"] {
-    border-bottom: #5D43FF solid 3px;
+    border-bottom: var(--purple) solid 3px;
     padding-left: 3rem;
     padding-right: 3rem;
 }

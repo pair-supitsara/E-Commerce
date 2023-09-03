@@ -25,7 +25,7 @@
     padding: 0.3rem;
     border: 2px solid black;
     border-radius: 5px;
-    outline-color: #5D43FF;
+    outline-color: var(--purple);
     letter-spacing: 1px;
 }
 .form-input:hover {
@@ -36,7 +36,7 @@
     width: 100%;
     background-color: white;
     padding: 0.2rem;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     border-radius: 5px;
 }
 .parent-input-info-input {
@@ -57,16 +57,16 @@
     vertical-align: middle !important;
 }
 .parent-input-info span:hover {
-    color: #5D43FF;
+    color: var(--purple);
 }
 
 
 .form-submit {
     width: 100%;
     padding: 0.4rem;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     border-radius: 5px;
-    background-color: #5D43FF;
+    background-color: var(--purple);
     color: white;
     font-size: .9rem;
     font-weight: 500;
@@ -89,7 +89,7 @@
     text-decoration: none;
 }
 #goPageRegister a:hover, #goPageLogin a:hover {
-    color: #5D43FF;
+    color: var(--purple);
     text-decoration: underline;
 }
 .col-1 {
@@ -115,7 +115,7 @@
     display: flex;
     flex-direction: column;    
     justify-content: center;
-    background-color: #5D43FF;
+    background-color: var(--purple);
     color: white;
     border-radius: 1rem 0 0 1rem;
 }
@@ -135,7 +135,7 @@
 .menu ul li:hover {
     cursor: pointer;
     background-color: white;
-    color: #5D43FF;
+    color: var(--purple);
     border-radius: .7rem;
 }
 .invisible {
