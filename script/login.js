@@ -42,16 +42,14 @@ async function fnAuthen(email, password) {
                                     <ul>${errorMsg}</ul>`
         modal.fnShowmodal(backdrop, alertModal, 'visible')
     } else {
-        alertMsg.innerHTML = `  <div>Register Sucess!</div>
-        <ul>${1234}</ul>`
-        modal.fnShowmodal(backdrop, alertModal, 'visible')
         const json = {
             email: email,
             password: password
         }
         const response = await api.fnfetchPostApi("/authen/fnLogin", json)
-        console.log(response)
 
+        alertMsg.innerHTML = `  <div>${response.message}</div> `
+        modal.fnShowmodal(backdrop, alertModal, 'visible')
     }
 
 }
